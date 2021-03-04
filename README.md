@@ -6,7 +6,7 @@ To test your abilities in full stack web development using the M.E.R.N. stack.
 
 ### Requirements
 
-- [] User can create an account.
+- [x] User can create an account.
 - [] User can their account information on their account page.
 - [] User can update their account.
 - [] User can delete their account.
