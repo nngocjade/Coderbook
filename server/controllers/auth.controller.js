@@ -11,10 +11,11 @@ authController.loginWithEmail = catchAsync(async (req, res, next) => {
   const { email, password } = req.body;
   const user = await User.findOne({ email });
   if (!user)
-    return next(new AppError(400, "Invalid credentials", "Login Error"));
+    return sendResponse(res, 400, false, null, null, "Wrong credentials");
 
   const isMatch = await bcrypt.compare(password, user.password);
-  if (!isMatch) return next(new AppError(400, "Wrong password", "Login Error"));
+  if (!isMatch)
+    return sendResponse(res, 400, false, null, null, "Wrong credentials");
 
   accessToken = await user.generateToken();
   return sendResponse(
