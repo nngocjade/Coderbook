@@ -139,11 +139,19 @@ export default function RegisterPage() {
             <Form.Row>
               <Form.Group as={Col} controlId="email">
                 <Form.Label>Email</Form.Label>
-                <Form.Control type="email" placeholder="Enter email" />
+                <Form.Control
+                  type="email"
+                  placeholder="Enter email"
+                  onChange={onChange}
+                />
               </Form.Group>
               <Form.Group as={Col} controlId="password">
                 <Form.Label>Password</Form.Label>
-                <Form.Control type="password" placeholder="Password" />
+                <Form.Control
+                  type="password"
+                  placeholder="Password"
+                  onChange={onChange}
+                />
               </Form.Group>
             </Form.Row>
             <p className="text-center p-terms">
