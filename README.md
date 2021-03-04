@@ -22,3 +22,7 @@ To test your abilities in full stack web development using the M.E.R.N. stack.
 - [] User can delete their own comments.
 - [] User can create a reaction on a post
 - [] User can delete a reaction on a post.
+
+### added features
+
+- [x] if user logs in with the wrong credentials, return status 400 and error message
